@@ -6,7 +6,7 @@
 - [x] Apply fixes for lint/runtime regressions and edge-case resilience.
 - [x] Harden Next.js configuration for Vercel deployment security headers.
 - [x] Re-run verification (`npm run lint`, `npm run build`, `npm audit --omit=dev`).
-- [ ] Commit all changes and push to GitHub.
+- [x] Commit all changes and push to GitHub.
 
 ## Review
 
