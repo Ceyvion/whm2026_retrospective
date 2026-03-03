@@ -16,7 +16,7 @@
 - Fixed medium-risk issue: raw email PII was stored in `localStorage`; now only a boolean flag is persisted.
 - Fixed medium-risk issue: missing hardening headers and `X-Powered-By` exposure in production responses.
 - Fixed regression risk: lint was effectively bypassed in build and now runs during `next build`.
-- Residual low-risk note: content images are still loaded from a third-party host (`picsum.photos`), which exposes client metadata (IP/user-agent/referrer policy-limited).
+- Fixed low-risk privacy issue: external image requests were removed by switching story backgrounds to self-hosted local assets.
 
 ### Verification Results
 

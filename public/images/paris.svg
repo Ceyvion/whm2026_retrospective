@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" role="img" aria-labelledby="title desc">
+  <title id="title">Paris abstract backdrop</title>
+  <desc id="desc">Night gradients with diagonal light bands.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#101823"/>
+      <stop offset="50%" stop-color="#1e2d45"/>
+      <stop offset="100%" stop-color="#375071"/>
+    </linearGradient>
+    <linearGradient id="beam" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#d7e5ff" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#d7e5ff" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#d7e5ff" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="1000" fill="url(#bg)"/>
+  <g transform="rotate(-18 800 500)">
+    <rect x="-200" y="220" width="2000" height="80" fill="url(#beam)"/>
+    <rect x="-180" y="420" width="2000" height="45" fill="url(#beam)"/>
+    <rect x="-220" y="640" width="2000" height="62" fill="url(#beam)"/>
+  </g>
+  <circle cx="1260" cy="240" r="140" fill="#f0e0bd" opacity="0.2"/>
+</svg>

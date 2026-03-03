@@ -4,7 +4,7 @@
 
 Scope: Next.js app security audit before Vercel deployment, including frontend data handling, config hardening, and runtime header posture.
 
-Outcome: No critical/high findings remain after remediation. Medium findings were fixed. One low residual privacy risk remains due third-party image hosting.
+Outcome: No critical/high findings remain after remediation. All identified medium/low findings were fixed in-repo.
 
 ## Fixed Findings
 
@@ -29,14 +29,12 @@ Outcome: No critical/high findings remain after remediation. Medium findings wer
 - **Risk:** Security/quality regressions can ship unchecked.
 - **Fix applied:** Re-enabled lint during build (`ignoreDuringBuilds: false`), and lint now passes.
 
-## Open Findings
+### SBP-004 (Low) - Third-party image hosting leaked client metadata
 
-### SBP-004 (Low) - Third-party image hosting leaks client metadata
-
-- **Location:** `/Users/macbookpro/Desktop/angélique-kidjo_-a-retrospective/app/page.tsx:33`, `/Users/macbookpro/Desktop/angélique-kidjo_-a-retrospective/app/animated-section.tsx:85`
-- **Issue:** Browsers fetch image assets from `picsum.photos`/`fastly.picsum.photos`.
-- **Risk:** External host receives client network metadata (IP/user-agent, referrer limited by policy).
-- **Recommendation:** For production/editorial use, self-host images in the project/CDN you control, or proxy through your backend/edge.
+- **Location:** `/Users/macbookpro/Desktop/angélique-kidjo_-a-retrospective/app/page.tsx:33`, `/Users/macbookpro/Desktop/angélique-kidjo_-a-retrospective/app/layout.tsx:28`, `/Users/macbookpro/Desktop/angélique-kidjo_-a-retrospective/next.config.ts:16`
+- **Previous issue:** Browsers fetched image assets from `picsum.photos` and preconnected to the same domain.
+- **Risk:** External host could receive client network metadata (IP/user-agent/referrer policy-limited).
+- **Fix applied:** Replaced story images with self-hosted local SVG assets in `public/images`, removed external preconnect/dns-prefetch links, and tightened CSP `img-src` to self/data/blob only.
 
 ## Verification Evidence
 

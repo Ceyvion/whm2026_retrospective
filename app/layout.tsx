@@ -29,10 +29,6 @@ export const metadata: Metadata = {
 export default function RootLayout({children}: {children: React.ReactNode}) {
   return (
     <html lang="en" className={`${cormorant.variable} ${montserrat.variable}`}>
-      <head>
-        <link rel="preconnect" href="https://picsum.photos" />
-        <link rel="dns-prefetch" href="https://picsum.photos" />
-      </head>
       <body suppressHydrationWarning className="antialiased">
         <div className="texture-overlay"></div>
         {children}

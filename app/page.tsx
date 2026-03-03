@@ -30,7 +30,7 @@ const storyData: StoryCard[] = [
     fact: "Her early role model was Togolese singer Bella Bellow. Kidjo's debut album Pretty (1981) was recorded on a student loan with her brother Oscar.",
     bg: "bg-parchment",
     text: "text-ink",
-    image: "https://picsum.photos/seed/benin/960/640",
+    image: '/images/benin.svg',
   },
   {
     title: "A World in a Radio",
@@ -48,7 +48,7 @@ const storyData: StoryCard[] = [
     bg: "bg-terracotta",
     text: "text-parchment",
     pauseAndThink: "What would you refuse to say, even if silence meant exile?",
-    image: "https://picsum.photos/seed/paris/960/640",
+    image: '/images/paris.svg',
   },
   {
     title: "Logozo",
@@ -67,7 +67,7 @@ const storyData: StoryCard[] = [
     bg: "bg-ink",
     text: "text-parchment",
     highlight: "Oremi · Black Ivory Soul · Oyaya!",
-    image: "https://picsum.photos/seed/ocean/960/640",
+    image: '/images/ocean.svg',
   },
   {
     title: "Remain in Light",
@@ -85,7 +85,7 @@ const storyData: StoryCard[] = [
     fact: "The Guardian called the result 'magnificent.' The Financial Times gave it five stars.",
     bg: "bg-terracotta",
     text: "text-parchment",
-    image: "https://picsum.photos/seed/dance/960/640",
+    image: '/images/dance.svg',
   },
   {
     title: "Five Grammys",
@@ -103,7 +103,7 @@ const storyData: StoryCard[] = [
     fact: "Time Magazine named her one of the 100 most influential people in the world. She performed NPR Music's historic 1,000th Tiny Desk Concert.",
     bg: "bg-parchment",
     text: "text-ink",
-    image: "https://picsum.photos/seed/education/960/640",
+    image: '/images/education.svg',
   },
   {
     title: "Passing the Torch",

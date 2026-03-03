@@ -74,10 +74,9 @@ export default function AnimatedSection({
       data-section-index={index}
       className={`h-[100dvh] w-full snap-start flex flex-col justify-center items-center p-6 md:p-12 relative overflow-hidden ${card.bg} ${card.text}`}
     >
-      {/* Background image — plain CSS, no Next.js proxy.
-          picsum.photos redirects to fastly.picsum.photos which
-          the /_next/image proxy can choke on. A CSS background-image
-          lets the browser follow the redirect natively. */}
+      {/* Background image from local static assets.
+          Using a CSS background keeps the visual treatment
+          lightweight and avoids extra image component overhead. */}
       {card.image && (
         <div
           className="absolute inset-0 z-0 opacity-20 grayscale"

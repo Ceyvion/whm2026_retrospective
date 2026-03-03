@@ -13,7 +13,7 @@ const contentSecurityPolicy = [
   "object-src 'none'",
   "script-src 'self' 'unsafe-inline'",
   "style-src 'self' 'unsafe-inline'",
-  "img-src 'self' data: blob: https://picsum.photos https://fastly.picsum.photos",
+  "img-src 'self' data: blob:",
   "font-src 'self' data:",
   "connect-src 'self'",
   'upgrade-insecure-requests',
@@ -29,17 +29,6 @@ const nextConfig: NextConfig = {
     ignoreBuildErrors: false,
   },
   outputFileTracingRoot: __dirname,
-  images: {
-    formats: ['image/avif', 'image/webp'],
-    remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: 'picsum.photos',
-        port: '',
-        pathname: '/**',
-      },
-    ],
-  },
   output: 'standalone',
   transpilePackages: ['motion'],
   async headers() {
@@ -73,7 +62,7 @@ const nextConfig: NextConfig = {
           },
           {
             key: 'X-DNS-Prefetch-Control',
-            value: 'on',
+            value: 'off',
           },
         ],
       },
