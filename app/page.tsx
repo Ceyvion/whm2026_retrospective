@@ -22,6 +22,7 @@ const storyData: StoryCard[] = [
     narrative: "Five Grammys. Four decades. One voice that bent the arc of African music toward the world.",
     bg: "bg-ink",
     text: "text-parchment",
+    image: '/images/angelique-kidjo.jpg',
   },
   {
     title: "The Voice of Ouidah",

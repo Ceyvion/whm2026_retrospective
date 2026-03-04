@@ -79,11 +79,11 @@ export default function AnimatedSection({
           lightweight and avoids extra image component overhead. */}
       {card.image && (
         <div
-          className="absolute inset-0 z-0 opacity-20 grayscale"
+          className={`absolute inset-0 z-0 ${isHero ? 'opacity-30' : 'opacity-20 grayscale'}`}
           style={{
             backgroundImage: `url(${card.image})`,
             backgroundSize: 'cover',
-            backgroundPosition: 'center',
+            backgroundPosition: isHero ? 'center top' : 'center',
           }}
           role="presentation"
         />
