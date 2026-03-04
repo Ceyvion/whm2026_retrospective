@@ -1,6 +1,8 @@
+import Image from 'next/image';
 import AnimatedSection from './animated-section';
 import ScrollProgress from './scroll-progress';
 import EmailSignup from './email-signup';
+import SignupReveal from './signup-reveal';
 
 interface StoryCard {
   title: string;
@@ -144,24 +146,58 @@ export default function Home() {
           data-section-index={storyData.length}
           className="h-[100dvh] w-full snap-start flex flex-col justify-center items-center p-6 md:p-12 relative overflow-hidden bg-ink text-parchment"
         >
-          <div className="z-10 max-w-md w-full flex flex-col items-center text-center space-y-8">
+          {/* Background photo */}
+          <div className="absolute inset-0 z-0 opacity-15">
+            <Image
+              src="/images/kidjo-london.jpg"
+              alt=""
+              fill
+              sizes="100vw"
+              className="object-cover"
+              style={{ objectPosition: 'center top' }}
+              quality={50}
+            />
+          </div>
+
+          {/* Gradient vignette overlay */}
+          <div className="absolute inset-0 z-[1] bg-gradient-to-t from-ink via-ink/80 to-ink/40" />
+
+          {/* Gold accent line at top */}
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center">
+            <span className="w-[1px] h-16 bg-gradient-to-b from-transparent to-gold/40" />
+          </div>
+
+          <SignupReveal>
             <span className="font-sans text-[10px] uppercase tracking-[0.3em] opacity-50">
               Stay Connected
             </span>
+
+            {/* Quote */}
+            <blockquote className="relative px-6 py-4">
+              <span className="absolute top-0 left-0 font-serif text-3xl text-gold/30 leading-none">&ldquo;</span>
+              <p className="font-serif italic text-lg md:text-xl leading-relaxed opacity-80">
+                An artist is only really a full artist if they are aware of the society around them.
+              </p>
+              <span className="absolute bottom-0 right-0 font-serif text-3xl text-gold/30 leading-none">&rdquo;</span>
+            </blockquote>
+
+            <div className="flex items-center gap-3">
+              <span className="w-12 h-[1px] bg-gold/30" />
+              <span className="w-1.5 h-1.5 rotate-45 border border-gold/40" />
+              <span className="w-12 h-[1px] bg-gold/30" />
+            </div>
+
             <h2 className="font-serif text-4xl md:text-5xl tracking-tight leading-[1.1]">
               The Story Continues
             </h2>
-            <div className="flex items-center gap-3">
-              <span className="w-8 h-[1px] bg-current opacity-20" />
-              <span className="w-1.5 h-1.5 rotate-45 border border-current/20" />
-              <span className="w-8 h-[1px] bg-current opacity-20" />
-            </div>
-            <p className="font-sans text-sm font-light leading-relaxed tracking-wide opacity-70">
+
+            <p className="font-sans text-sm font-light leading-relaxed tracking-wide opacity-60 max-w-xs">
               Four decades in, Kidjo keeps surprising us. Sign up for updates
               on new releases, performances, and the ongoing legacy.
             </p>
+
             <EmailSignup />
-          </div>
+          </SignupReveal>
         </section>
       </main>
     </>
