@@ -31,7 +31,7 @@ const storyData: StoryCard[] = [
     fact: "Her early role model was Togolese singer Bella Bellow. Kidjo's debut album Pretty (1981) was recorded on a student loan with her brother Oscar.",
     bg: "bg-parchment",
     text: "text-ink",
-    image: '/images/benin.svg',
+    image: '/images/kidjo-performance.jpg',
   },
   {
     title: "A World in a Radio",
@@ -40,6 +40,7 @@ const storyData: StoryCard[] = [
     fact: "She speaks and sings in five languages: Fon, French, Yorùbá, Gen, and English.",
     bg: "bg-ink",
     text: "text-parchment",
+    image: '/images/kidjo-yerba.jpg',
   },
   {
     title: "The Exodus",
@@ -49,7 +50,7 @@ const storyData: StoryCard[] = [
     bg: "bg-terracotta",
     text: "text-parchment",
     pauseAndThink: "What would you refuse to say, even if silence meant exile?",
-    image: '/images/paris.svg',
+    image: '/images/kidjo-2012.jpg',
   },
   {
     title: "Logozo",
@@ -59,6 +60,7 @@ const storyData: StoryCard[] = [
     bg: "bg-parchment",
     text: "text-ink",
     highlight: "Logozo (1991) · Ayé (1994) · FIFA (1996)",
+    image: '/images/kidjo-fete.jpg',
   },
   {
     title: "Tracing the Slave Routes",
@@ -68,7 +70,7 @@ const storyData: StoryCard[] = [
     bg: "bg-ink",
     text: "text-parchment",
     highlight: "Oremi · Black Ivory Soul · Oyaya!",
-    image: '/images/ocean.svg',
+    image: '/images/kidjo-concert.jpg',
   },
   {
     title: "Remain in Light",
@@ -78,6 +80,7 @@ const storyData: StoryCard[] = [
     bg: "bg-parchment",
     text: "text-ink",
     pauseAndThink: "When music travels the world and returns transformed, who does it belong to?",
+    image: '/images/kidjo-london.jpg',
   },
   {
     title: "Celia",
@@ -86,7 +89,7 @@ const storyData: StoryCard[] = [
     fact: "The Guardian called the result 'magnificent.' The Financial Times gave it five stars.",
     bg: "bg-terracotta",
     text: "text-parchment",
-    image: '/images/dance.svg',
+    image: '/images/kidjo-performance.jpg',
   },
   {
     title: "Five Grammys",
@@ -96,6 +99,7 @@ const storyData: StoryCard[] = [
     bg: "bg-ink",
     text: "text-parchment",
     highlight: "Djin Djin · Eve · Sings · Celia · Mother Nature",
+    image: '/images/kidjo-gershwin.jpg',
   },
   {
     title: "A Voice Beyond Music",
@@ -104,7 +108,7 @@ const storyData: StoryCard[] = [
     fact: "Time Magazine named her one of the 100 most influential people in the world. She performed NPR Music's historic 1,000th Tiny Desk Concert.",
     bg: "bg-parchment",
     text: "text-ink",
-    image: '/images/education.svg',
+    image: '/images/kidjo-activism.jpg',
   },
   {
     title: "Passing the Torch",
@@ -114,6 +118,7 @@ const storyData: StoryCard[] = [
     bg: "bg-ink",
     text: "text-parchment",
     pauseAndThink: "Whose shoulders do today's biggest artists stand on?",
+    image: '/images/kidjo-fete.jpg',
   },
 ];
 
