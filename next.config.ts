@@ -22,6 +22,10 @@ const contentSecurityPolicy = [
 const nextConfig: NextConfig = {
   reactStrictMode: true,
   poweredByHeader: false,
+  images: {
+    formats: ['image/avif', 'image/webp'],
+    minimumCacheTTL: 2_592_000, // 30 days
+  },
   eslint: {
     ignoreDuringBuilds: false,
   },

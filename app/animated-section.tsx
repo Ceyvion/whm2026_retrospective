@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import { motion } from 'motion/react';
 import { ChevronDown } from 'lucide-react';
 
@@ -52,12 +53,6 @@ const heroFade = {
   },
 };
 
-/* Image uses CSS opacity — no motion wrapper.
-   Animating opacity from 0 conflicts with the browser's
-   lazy-load heuristic, which deprioritises images in
-   invisible containers. Keeping a static 15% opacity
-   ensures the browser fetches them reliably. */
-
 /* ── Component ── */
 
 export default function AnimatedSection({
@@ -74,19 +69,21 @@ export default function AnimatedSection({
       data-section-index={index}
       className={`h-[100dvh] w-full snap-start flex flex-col justify-center items-center p-6 md:p-12 relative overflow-hidden ${card.bg} ${card.text}`}
     >
-      {/* Background image from local static assets.
-          Using a CSS background keeps the visual treatment
-          lightweight and avoids extra image component overhead. */}
+      {/* Background image optimized by Next.js.
+          Hero loads eagerly; remaining sections lazy-load. */}
       {card.image && (
-        <div
-          className={`absolute inset-0 z-0 ${isHero ? 'opacity-30' : 'opacity-20 grayscale'}`}
-          style={{
-            backgroundImage: `url(${card.image})`,
-            backgroundSize: 'cover',
-            backgroundPosition: isHero ? 'center top' : 'center',
-          }}
-          role="presentation"
-        />
+        <div className={`absolute inset-0 z-0 ${isHero ? 'opacity-30' : 'opacity-20 grayscale'}`}>
+          <Image
+            src={card.image}
+            alt=""
+            fill
+            sizes="100vw"
+            className="object-cover"
+            style={{objectPosition: isHero ? 'center top' : 'center'}}
+            quality={isHero ? 75 : 60}
+            priority={isHero}
+          />
+        </div>
       )}
 
       {/* Section number */}
